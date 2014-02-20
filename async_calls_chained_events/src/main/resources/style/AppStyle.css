@@ -1,0 +1,31 @@
+/* Application style declaration */
+@namespace s "library://ns.adobe.com/flex/spark";
+
+.application_bg
+{
+	backgroundColor: #3c3f41;
+}
+
+.weather_report_title
+{
+	fontFamily: arial;
+	fontSize: 18;
+	textAlign: center;
+	fontWeight: bold;
+	color: #ed8c3b;
+}
+
+.weather_report_textbox_title
+{
+	fontFamily: arial;
+	fontSize: 14;
+	color: #67ad55;
+}
+
+.weather_report_load_status
+{
+	fontFamily: arial;
+	fontSize: 14;
+	color: #ab7ec3;
+}
+

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<s:Application xmlns:fx="http://ns.adobe.com/mxml/2009" 
+			   xmlns:s="library://ns.adobe.com/flex/spark" 
+			   xmlns:mx="library://ns.adobe.com/flex/mx"
+			   xmlns:swiz="http://swiz.swizframework.org"
+			   xmlns:beans="main.flex.com.sxm.defferedLogger.core.beans.*"
+			   xmlns:ui="main.flex.com.sxm.defferedLogger.ui.*"
+			   minWidth="800" minHeight="600"
+			   styleName="application_bg">
+	
+	<!-- Global resource manager -->
+	<fx:Metadata>
+		[ResourceBundle("applicationLabelResources")]
+	</fx:Metadata>
+	
+	<!-- Global style declaration -->
+	<fx:Style source="src/main/resources/style/AppStyle.css"/>
+	
+	<!-- SWIC configuration -->
+	<fx:Declarations>
+		<swiz:Swiz>
+			<!--Bean Providers-->
+			<swiz:beanProviders>
+				<beans:DefferedLoggerBeans/>
+			</swiz:beanProviders>
+			
+			<!--Logging targets-->
+			<swiz:loggingTargets>
+				<swiz:SwizTraceTarget id="applicationTraceTarget" />
+			</swiz:loggingTargets>
+			
+			<swiz:config>
+				<swiz:SwizConfig
+					setUpEventType="{ Event.ADDED_TO_STAGE }"
+					setUpEventPhase="{ EventPhase.CAPTURING_PHASE }"
+					setUpEventPriority="50"
+					tearDownEventType="{ Event.REMOVED_FROM_STAGE }"
+					tearDownEventPhase="{ EventPhase.CAPTURING_PHASE }"
+					tearDownEventPriority="50"
+					eventPackages="main.flex.com.sxm.defferedLogger.core.events.*" 						
+					viewPackages="main.flex.com.sxm.defferedLogger.ui.*"/>
+			</swiz:config>
+		</swiz:Swiz>
+	</fx:Declarations>
+	
+	<!-- UI markup -->
+	<ui:DefferedLogger id="defferedLogger" 
+					  left="10" right="10" top="10" bottom="10"
+					  horizontalCenter="0" verticalCenter="0"/>
+</s:Application>

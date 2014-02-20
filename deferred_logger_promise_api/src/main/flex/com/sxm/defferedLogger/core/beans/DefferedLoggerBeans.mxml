@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<swiz:BeanProvider xmlns:fx="http://ns.adobe.com/mxml/2009" 
+				   xmlns:s="library://ns.adobe.com/flex/spark"
+				   xmlns:swiz="http://swiz.swizframework.org" 
+				   xmlns:controllers="main.flex.com.sxm.defferedLogger.core.controllers.*" 
+				   xmlns:models="main.flex.com.sxm.defferedLogger.core.models.*" 
+				   xmlns:delegates="main.flex.com.sxm.defferedLogger.core.delegates.*">
+	
+	<fx:Script>
+		<![CDATA[
+			import main.flex.com.sxm.defferedLogger.core.models.presentation.DefferedLoggerPresentationModel;
+		]]>
+	</fx:Script>
+	
+	<fx:Declarations>
+		<!-- view -->
+		<swiz:Prototype type="{DefferedLoggerPresentationModel}" />	
+		
+		<!-- controller -->
+		<delegates:LoggerDelegate id="loggerDelegate"/>
+		
+	</fx:Declarations>
+	
+</swiz:BeanProvider	>
